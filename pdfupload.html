@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title> Text Summarizer </title>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <!-- <a class="navbar-brand" href="#">Text Summarizer</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('intro') }}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('pdf') }}">pdf Summarizer<span class="sr-only"></span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url_for('model') }}"> Text Summarizer </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html"> Google Pegasus </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url_for('contact') }}"> Contact </span></a>
+                </li>
+            </ul>
+
+            <!-- <form class="form-inline my-2 my-lg-0"> -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+
+    </nav>
+    </br>
+    </br>
+    </br>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(500)
+                        .height(500);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    {% if message %}
+    <div class="alert alert-danger">Please Upload pdf file</div>
+    {% endif %}
+    <div class="row" style="margin-bottom: 300px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <center>
+                <h1>Pdf Summarizer</h1>
+            </center>
+            <div class="card card-body">
+                <center>
+                    <h3>Please upload Pdf</h3>
+                </center>
+                <form class="form-horizontal" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                    <center>
+                        <input onchange="readURL(this);" type="file" name="pdf" placeholder="Upload pdf">
+                        <br>
+                        <br>
+                        <input class="btn btn-info" type="submit">
+                    </center>
+                </form>
+            </div>
+            </br>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
