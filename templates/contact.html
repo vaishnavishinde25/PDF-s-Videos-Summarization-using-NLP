@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title> Text Summarizer </title>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <!-- <a class="navbar-brand" href="#">Text Summarizer</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('intro') }}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('pdf') }}">pdf Summarizer</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ url_for('model') }}"> Text Summarizer </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html"> Google Pegasus </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('contact') }}"> Contact <span class="sr-only"></span></a>
+                </li>
+            </ul>
+
+            <!-- <form class="form-inline my-2 my-lg-0"> -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+        </div>
+    </nav>
+
+    </nav>
+
+    <main role="main" class="container" style="padding-top: 10%">
+        <center>
+            <div class="jumbotron">
+                <h1>Contact</h1>
+                </br>
+                <h4>Pooja Thorat</h4>
+                <p>NLP Data Scientist at 2020 Analytics Insights</br> poojathorat2707@gmail.com</p>
+                <a class="btn btn-md btn-info" href="https://github.com/shritech1404" target="_blank" role="button">Also Visit</a>
+            </div>
+        </center>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">*Copy Right Reserved.  Please contact me for more information</span>
+        </div>
+    </footer>

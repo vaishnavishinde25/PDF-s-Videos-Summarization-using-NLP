@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <title> Text Summarizer </title>
+
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+    </head>
+
+    <body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"> 
+        <!-- <a class="navbar-brand" href="#">Text Summarizer</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+             <div class="collapse navbar-collapse" id="navbarsExampleDefault">   
+                <ul class="navbar-nav mr-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('intro') }}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('pdf') }}">pdf Summarizer</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{{ url_for('model') }}"> Text Summarizer</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link "  href="https://ai.googleblog.com/2020/06/pegasus-state-of-art-model-for.html"> Google Pegasus </span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}"> Contact </a>
+                    </li>
+                </ul>
+
+                <!-- <form class="form-inline my-2 my-lg-0"> -->
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+
+            </div>    
+    </nav>
+
+
+
+        <div id = "form-input-id" style="padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 7%;
+        padding-bottom: 5%;"> <div>
+
+        <!-- <div class="card text-center"> -->
+        <div class="card border-info mb-3 text-center",style="max-width: 18rem;">
+            <div class="card-body">
+                <h3 class="card-title">Input Text</h3><br><br>
+                    <p class="card-text">{{text}}</p><br><br>
+                </div>
+
+                <div class="card-footer">
+                    <h3 class="card-title">Abstractive Summary</h3><br><br>
+                        <p class="card-text">{{summary}}</p><br><br><br><br>                       
+                    </div>   <br>
+
+                <div class="card-footer">
+                    <h3 class="card-title">Extractive Summary</h3><br><br>
+                        <p class="card-text">{{gensim_summary}}</p><br><br><br><br>
+                            
+                    </div>
+                    <br>
+                    <br>
+
+        <center><a href="/" class="btn btn-info">Back to Summarizer</a><center><br><br>
+    <div>
+
+<div>
+
+        <!-- <center><button type="button"  class="btn btn-outline-success"><a href="/">BACK TO HOMEPAGE</a><br></button></center><br> -->
+
+       

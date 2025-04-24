@@ -1,0 +1,6 @@
+flask
+gensim==3.8.2
+PyPDF2
+requests
+beautifulsoup4
+youtube_transcript_api
